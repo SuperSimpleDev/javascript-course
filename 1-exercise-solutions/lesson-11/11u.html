@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(foods) {
+        // To prevent modifying the original array, we
+        // just need to create a copy using .slice()
+        const foodsCopy = foods.slice();
+        const reversedFoods = foodsCopy.reverse();
+
+        // We can also write the code in 1 line since
+        // .slice() results in an array, which means
+        // we can use .reverse() on the result directly.
+        // This is called "method chaining".
+        /*
+        const reversedFoods = foods.slice().reverse();
+        */
+
+        const result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < reversedFoods.length; i++) {
+          if (foods[i] === 'egg' && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+
+          result.push(foods[i]);
+        }
+
+        return result.reverse();
+      }
+
+      const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+      console.log(removeEgg(foods));
+      console.log(foods);
+    </script>
+  </body>
+</html>

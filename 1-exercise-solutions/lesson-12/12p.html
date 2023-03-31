@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!--
+      This is the updated code for exercise 12c
+      just as an example. Feel free, to update
+      12d - 12i as well for more practice.
+    -->
+    <button class="js-button" onclick="
+      updateButton();
+    ">Start</button>
+
+    <script>
+      function updateButton() {
+        const button = document.querySelector('.js-button');
+
+        // The function below was changed
+        // to an arrow function.
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

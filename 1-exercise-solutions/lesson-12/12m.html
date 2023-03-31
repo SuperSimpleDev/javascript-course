@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function addNum(array, num) {
+        // When there is only 1 parameter,
+        // the brackets are optional. So we
+        // can also write: value => value + num
+        return array.map((value) => value + num);
+      }
+
+      console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([-2, -1, 0, 99], 2));
+    </script>
+  </body>
+</html>

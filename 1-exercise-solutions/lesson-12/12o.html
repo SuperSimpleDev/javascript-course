@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(foods) {
+        let eggsRemoved = 0;
+
+        return foods.filter((food) => {
+          // If the food is 'egg', we should return false
+          // but only if we haven't removed 2 eggs already.
+          if (food === 'egg' && eggsRemoved < 2) {
+            eggsRemoved++;
+            return false;
+          }
+
+          return true;
+        });
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+  </body>
+</html>

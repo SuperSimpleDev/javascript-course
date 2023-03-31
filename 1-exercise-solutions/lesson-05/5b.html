@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const name = 'Simon';
+      console.log(`My name is: ${name}`);
+    </script>
+  </body>
+</html>

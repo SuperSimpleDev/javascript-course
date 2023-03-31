@@ -1,0 +1,24 @@
+/* See 12r.css for the full code. */
+.reset-score-button,
+.auto-play-button,
+/*
+  Reuse the style for the reset-score-button
+  by using a comma in the selector.
+*/
+.reset-confirm-button {
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/*
+  Add extra margin to the confirm buttons.
+  In CSS, we can add multiple sets of styles
+  to the same class. Styles written later
+  will override styles written before.
+*/
+.reset-confirm-button {
+  margin-left: 10px;
+}

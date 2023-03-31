@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="11x.css">
+  </head>
+  <body>
+    <p>Todo List</p>
+
+    <div class="todo-input-grid">
+      <input placeholder="Todo name"
+        class="js-name-input name-input">
+      <input type="date"
+        class="js-due-date-input due-date-input">
+      <button onclick="
+        addTodo();
+      " class="add-todo-button">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+
+    <script src="11x.js"></script>
+  </body>
+</html>

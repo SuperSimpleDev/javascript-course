@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(foods) {
+        // If food is 'egg', the inner function returns false
+        //   and the food is not included in the result.
+        // Otherwise, the inner function returns true
+        //   and the food is included in the result. 
+        return foods.filter((food) => food !== 'egg');
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+  </body>
+</html>

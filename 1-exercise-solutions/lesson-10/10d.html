@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* The word "toggle" means turn on/off. */
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Gaming</button>
+  </body>
+</html>
