@@ -95,5 +95,7 @@ document.querySelectorAll('.js-add-to-cart')
       const addedMessage = document.querySelector(
         `.js-added-to-cart-${productId}`
       );
+
+      addedMessage.classList.add('added-to-cart-visible');
     });
   });
