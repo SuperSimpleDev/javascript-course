@@ -10,10 +10,20 @@
       // this to work correctly, we need to add
       // brackets () around the || check to make
       // sure that it gets done first.
-      if ((age <= 6 || age >= 65) && !isHoliday) {
+      //here a logic is missed i.e and logic if both statements are true then only it will go inside statement else it won't go and thus goes to next conditions 
+      // if  observed isHoliday is true and providng negation makes it false so ,for and(&&) logic the two conditons must be true else it won't work,unfortunatley the code won't give expected result as it fails the logic of and operator 
+      // to avoid it use new variable called isNotHoliday and then do the logic it works
+    /*  if ((age <= 6 || age >= 65) && !isHoliday) {
         console.log('Discount');
       } else {
         console.log('No discount');
+      }*/
+      const isNotHoliday=true;
+      if((age<=6 || age>=65) && isNotHoliday){
+        console.log('discount');
+      }
+      else{
+        console.log('no discount');
       }
     </script>
   </body>
