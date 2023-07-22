@@ -44,6 +44,8 @@
         // If we're already displaying the notification,
         // stop this function because we don't want to
         // create 2 intervals at the same time.
+        // In this case, the function `displayNotification()` will return
+        // early and not execute the rest of the code.
         if (isDisplayingNotification) {
           return;
         }
