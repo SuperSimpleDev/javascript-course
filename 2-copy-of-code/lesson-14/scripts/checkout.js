@@ -1,7 +1,12 @@
-// Optional: notice we can write imports on multiple
-// lines so the line doesn't get too long.
-import {cart, removeFromCart,
-  calculateCartQuantity} from '../data/cart.js';
+// Optional: when importing a lot of values, you
+// can put each value on a separate line to make
+// the code easier to read.
+import {
+  cart,
+  removeFromCart,
+  calculateCartQuantity,
+  updateQuantity
+} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 
@@ -157,5 +162,6 @@ document.querySelectorAll('.js-save-link')
         `.js-quantity-input-${productId}`
       );
       const newQuantity = Number(quantityInput.value);
+      updateQuantity(productId, newQuantity);
     });
   });
