@@ -226,3 +226,11 @@
 .is-editing-quantity .save-quantity-link {
   display: initial;
 }
+
+.is-editing-quantity .quantity-label {
+  display: none;
+}
+
+.is-editing-quantity .update-quantity-link {
+  display: none;
+}
