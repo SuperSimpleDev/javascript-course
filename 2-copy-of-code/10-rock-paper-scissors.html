@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles/10-rock-paper-scissors.css">
-  </head>
-  <body>
-    <p class="title">Rock Paper Scissors</p>
-    <button onclick="
-      playGame('rock');
-    " class="move-button">
-      <img src="images/rock-emoji.png" class="move-icon">
-    </button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    /* (Your CSS styles) */
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <button class="choice" data-choice="rock">Rock</button>
+  <button class="choice" data-choice="paper">Paper</button>
+  <button class="choice" data-choice="scissors">Scissors</button>
+  <div>
+    <p>Wins: <span id="wins">0</span></p>
+    <p>Losses: <span id="losses">0</span></p>
+    <p>Ties: <span id="ties">0</span></p>
+  </div>
+  <script>
+    const choices = document.querySelectorAll('.choice');
+    let wins = 0;
+    let losses = 0;
+    let ties = 0;
 
-    <button onclick="
-      playGame('paper');
-    " class="move-button">
-      <img src="images/paper-emoji.png" class="move-icon">
-    </button>
+    choices.forEach(choice => {
+      choice.addEventListener('click', () => playerGame(choice.dataset.choice));
+    });
 
-    <button onclick="
-      playGame('scissors');
-    " class="move-button">
-      <img src="images/scissors-emoji.png" class="move-icon">
-    </button>
+    function playerGame(playerMove) {
+      const moves = ['rock', 'paper', 'scissors'];
+      const computerMove = moves[Math.floor(Math.random() * moves.length)];
 
-    <p class="js-result result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score score"></p>
+      const outcome = {
+        rock: { win: 'scissors', lose: 'paper' },
+        paper: { win: 'rock', lose: 'scissors' },
+        scissors: { win: 'paper', lose: 'rock' },
+      };
 
-    <button onclick="
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElement();
-    " class="reset-score-button">Reset Score</button>
+      if (playerMove === computerMove) {
+        ties++;
+      } else if (computerMove === outcome[playerMove].lose) {
+        wins++;
+      } else {
+        losses++;
+      }
 
-    <script src="scripts/10-rock-paper-scissors.js"></script>
-  </body>
+      document.getElementById('wins').textContent = wins;
+      document.getElementById('losses').textContent = losses;
+      document.getElementById('ties').textContent = ties;
+
+      alert(`You picked ${playerMove}, Computer picked ${computerMove}, ${wins > losses ? 'You win!' : losses > wins ? 'You lose!' : 'It\'s a tie!'}`);
+    }
+  </script>
+</body>
 </html>
