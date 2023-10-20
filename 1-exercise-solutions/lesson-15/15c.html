@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script type="module">
+      import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+      const today = dayjs();
+      const date = today.subtract(1, 'month');
+      console.log(date.format('MMMM D'));
+    </script>
+  </body>
+</html>
