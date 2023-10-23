@@ -209,3 +209,29 @@
   margin-top: 11px;
   margin-bottom: 15px;
 }
+
+/* This code was copied from the solutions of exercises 14f - 14n. */
+.quantity-input {
+  width: 30px;
+  display: none;
+}
+
+.save-quantity-link {
+  display: none;
+}
+
+.is-editing-quantity .quantity-input {
+  display: initial;
+}
+
+.is-editing-quantity .save-quantity-link {
+  display: initial;
+}
+
+.is-editing-quantity .quantity-label {
+  display: none;
+}
+
+.is-editing-quantity .update-quantity-link {
+  display: none;
+}
