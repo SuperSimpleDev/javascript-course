@@ -5,18 +5,18 @@
     <script>
       function removeEgg(foods) {
         // To prevent modifying the original array, we
-        // just need to create a copy using .slice()
+        // can create a copy of the array using .slice()
         const foodsCopy = foods.slice();
         const reversedFoods = foodsCopy.reverse();
 
-        // We can also write the code in 1 line since
-        // .slice() results in an array, which means
-        // we can use .reverse() on the result directly.
-        // This is called "method chaining".
-        /*
-        const reversedFoods = foods.slice().reverse();
-        */
-
+        // Advanced technique:
+        // Since foods.slice() results in an array, we
+        // can also use .reverse() directly like this:
+        // foods.slice().reverse();
+        
+        // This technique is called "method chaining"
+        // because we use one method after another
+        // (like a chain of methods).
         const result = [];
         let eggsRemoved = 0;
 
