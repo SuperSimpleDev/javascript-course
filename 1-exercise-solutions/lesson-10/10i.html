@@ -107,6 +107,10 @@
       ">.</button>
 
       <button class="calculator-button gray-button" onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
         calculation = eval(calculation);
 
         // Display the calculation on the page
