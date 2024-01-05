@@ -11,12 +11,12 @@
         let eggsRemoved = 0;
 
         for (let i = 0; i < reversedFoods.length; i++) {
-          if (foods[i] === 'egg' && eggsRemoved < 2) {
+          if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
             eggsRemoved++;
             continue;
           }
 
-          result.push(foods[i]);
+          result.push(reversedFoods[i]);
         }
 
         // At the end, remember to .reverse() back the result.
