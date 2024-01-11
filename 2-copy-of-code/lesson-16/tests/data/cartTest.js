@@ -46,13 +46,13 @@ describe('test suite: addToCart', () => {
   });
 });
 
-describe('test suite: removeFromCart', function() {
-  beforeEach(function() {
+describe('test suite: removeFromCart', () => {
+  beforeEach(() => {
     spyOn(localStorage, 'setItem');
   });
 
-  it('removes a product from the cart', function() {
-    spyOn(localStorage, 'getItem').and.callFake(function() {
+  it('removes a product from the cart', () => {
+    spyOn(localStorage, 'getItem').and.callFake(() => {
       return JSON.stringify([{
         productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
         quantity: 1,
@@ -67,8 +67,8 @@ describe('test suite: removeFromCart', function() {
     expect(localStorage.setItem).toHaveBeenCalledWith('cart', JSON.stringify([]));
   });
 
-  it('does nothing if product is not in the cart', function() {
-    spyOn(localStorage, 'getItem').and.callFake(function() {
+  it('does nothing if product is not in the cart', () => {
+    spyOn(localStorage, 'getItem').and.callFake(() => {
       return JSON.stringify([{
         productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
         quantity: 1,
