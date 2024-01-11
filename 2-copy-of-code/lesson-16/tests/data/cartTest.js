@@ -119,8 +119,8 @@ describe('test suite: updateDeliveryOption', () => {
     }]));
   });
 
-  it('does nothing if the product is not in the cart', function() {
-    spyOn(localStorage, 'getItem').and.callFake(function() {
+  it('does nothing if the product is not in the cart', () => {
+    spyOn(localStorage, 'getItem').and.callFake(() => {
       return JSON.stringify([{
         productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
         quantity: 1,
