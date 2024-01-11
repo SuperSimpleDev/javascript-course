@@ -78,7 +78,7 @@ describe('test suite: renderOrderSummary', () => {
     expect(cart[0].productId).toEqual(productId2);
   });
 
-  it('updates the delivery option', function() {
+  it('updates the delivery option', () => {
     document.querySelector(`.js-delivery-option-${productId1}-3`).click();
 
     expect(
