@@ -21,11 +21,5 @@ export function getDeliveryOption(deliveryOptionId) {
     }
   });
 
-  // Note: || deliveryOptions[0] is not in the video,
-  // but in case the cart saved in your localStorage
-  // does not have deliveryOptionIds, this code will
-  // return the first deliveryOption by default. This
-  // avoids errors caused by missing deliveryOptionIds.
-  // I will add this code to the video in the future.
-  return deliveryOption || deliveryOptions[0];
+  return deliveryOption;
 }
