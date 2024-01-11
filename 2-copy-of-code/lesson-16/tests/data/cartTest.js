@@ -90,13 +90,13 @@ describe('test suite: removeFromCart', () => {
   });
 });
 
-describe('test suite: updateDeliveryOption', function() {
-  beforeEach(function() {
+describe('test suite: updateDeliveryOption', () => {
+  beforeEach(() => {
     spyOn(localStorage, 'setItem');
   });
 
-  it('updates the delivery option', function() {
-    spyOn(localStorage, 'getItem').and.callFake(function() {
+  it('updates the delivery option', () => {
+    spyOn(localStorage, 'getItem').and.callFake(() => {
       return JSON.stringify([{
         productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
         quantity: 1,
