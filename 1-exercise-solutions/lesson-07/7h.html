@@ -41,9 +41,7 @@
     ">-3</button>
 
     <button onclick="
-      cartQuantity = 0;
-      console.log('Cart was reset.');
-      console.log(`Cart quantity: ${cartQuantity}`);
+      updateCartQuantity();
     ">Reset Cart</button>
 
     <script>
@@ -56,6 +54,13 @@
         } else if (cartQuantity + change < 0) {
           alert('Not enough items in the cart');
 
+        } else if (!change) {
+          if (cartQuantity !== 0) {
+            cartQuantity = 0;
+            console.log("Cart is cleared. Cart quantity:" + cartQuantity);
+          } else {
+            console.log("Cart is already empty.Cart quantity:" + cartQuantity);
+          }
         } else {
           cartQuantity += change;
           console.log(`Cart quantity: ${cartQuantity}`);
