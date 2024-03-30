@@ -1,6 +1,6 @@
 class Car {
-  brand;
-  model;
+  #brand;
+  #model;
 
   // You can set a default value for a property
   // here, or in the constructor. They do the
@@ -9,8 +9,8 @@ class Car {
   isTrunkOpen = false;
 
   constructor(carDetails) {
-    this.brand = carDetails.brand;
-    this.model = carDetails.model;
+    this.#brand = carDetails.brand;
+    this.#model = carDetails.model;
 
     // You can set a default value for a property
     // here or directly in the property above.
@@ -21,7 +21,7 @@ class Car {
     const trunkStatus = this.isTrunkOpen ? 'open' : 'closed';
 
     console.log(
-      `${this.brand} ${this.model}, Speed: ${this.speed} km/h, Trunk: ${trunkStatus}`
+      `${this.#brand} ${this.#model}, Speed: ${this.speed} km/h, Trunk: ${trunkStatus}`
     );
   }
 
