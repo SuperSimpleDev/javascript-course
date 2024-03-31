@@ -56,7 +56,7 @@ class Car {
   }
 }
 
-class Racecar extends Car {
+class RaceCar extends Car {
   acceleration;
 
   constructor(carDetails) {
@@ -89,7 +89,7 @@ const car2 = new Car({
   brand: 'Tesla',
   model: 'Model 3'
 });
-const raceCar = new Racecar({
+const raceCar = new RaceCar({
   brand: 'McLaren',
   model: 'F1',
   acceleration: 20
