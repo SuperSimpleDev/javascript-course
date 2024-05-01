@@ -90,3 +90,9 @@ export async function loadCartFetch() {
   console.log(text);
   return text;
 }
+
+// Extra feature: make the cart empty after creating an order.
+export function resetCart() {
+  cart = [];
+  saveToStorage();
+}
