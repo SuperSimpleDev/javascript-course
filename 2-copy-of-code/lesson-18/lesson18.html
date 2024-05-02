@@ -12,6 +12,7 @@
       xhr.send();
       */
 
+      /*
       fetch(
         'https://supersimplebackend.dev/greeting'
       ).then((response) => {
@@ -19,6 +20,14 @@
       }).then((text) => {
         console.log(text);
       });
+      */
+
+      async function getGreeting() {
+        const response = await fetch('https://supersimplebackend.dev/greeting');
+        const text = await response.text();
+        console.log(text);
+      }
+      getGreeting();
     </script>
   </body>
 </html>
