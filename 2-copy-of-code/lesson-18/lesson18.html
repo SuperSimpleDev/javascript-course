@@ -22,12 +22,30 @@
       });
       */
 
+      /*
       async function getGreeting() {
         const response = await fetch('https://supersimplebackend.dev/greeting');
         const text = await response.text();
         console.log(text);
       }
       getGreeting();
+      */
+
+      async function postGreeting() {
+        const response = await fetch('https://supersimplebackend.dev/greeting', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: 'SuperSimpleDev'
+          })
+        });
+
+        const text = await response.text();
+        console.log(text);
+      }
+      postGreeting();
     </script>
   </body>
 </html>
