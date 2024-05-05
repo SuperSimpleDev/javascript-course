@@ -4,8 +4,8 @@
   <body>
     <script>
       function convertLength(length, from, to) {
-        // I like to put invalid checks at the top so it's a bit
-        // more clear and if something is invalid, we can skip
+        // I like to put invalid checks at the top since it's a bit
+        // easier to see. Also, if something is invalid, we can skip
         // the rest of the function.
         if (from !== 'km' && from !== 'miles' && from !== 'ft') {
           return `Invalid unit: ${from}`;
