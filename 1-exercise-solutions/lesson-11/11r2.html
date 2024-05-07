@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11 r</title>
+</head>
+<body>
+<script>
+
+  console.log(removeEgg(['egg', 'egg', 'apple', 'egg', 'egg', 'ham']));
+
+  function removeEgg(foods) {
+
+    for(let i=0; i<foods.length;) {
+      if(foods[i]==='egg'){
+        foods.splice(i,1);
+        console.log(foods);
+      }
+      else i++;
+
+      
+    }
+
+    return foods;
+
+  }
+</script>
+  
+</body>
+</html>
