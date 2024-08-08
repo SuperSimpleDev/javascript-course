@@ -19,7 +19,7 @@ function renderProductsGrid() {
       let matchingKeyword = false;
 
       product.keywords.forEach((keyword) => {
-        if (keyword.toLowerCase().includes(search.toLowerCase())) {
+        if (search.toLowerCase().includes(keyword.toLowerCase())) {
           matchingKeyword = true;
         }
       });
