@@ -1,3 +1,0 @@
-# DOPE
-
-watch youtube.
