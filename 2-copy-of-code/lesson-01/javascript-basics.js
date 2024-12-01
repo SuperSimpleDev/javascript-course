@@ -6,3 +6,5 @@ alert('Good job!');
 
 document.body.innerHTML = 'hello';
 document.write("Hallo world");
+document.write("Hallo world");
+document.write("Hallo world");
