@@ -5,3 +5,6 @@ alert('Good job!');
 10 - 3
 
 document.body.innerHTML = 'hello';
+document.write("Hallo world");
+document.write("Hallo world");
+document.write("Hallo world");
