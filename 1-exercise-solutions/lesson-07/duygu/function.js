@@ -48,3 +48,4 @@ function convertToCelsius (fahrenheit) {
 }
 
 convertToCelsius (86);
+
