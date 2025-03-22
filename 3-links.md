@@ -19,7 +19,7 @@ DayJS external library: https://unpkg.com/dayjs@1.11.10/dayjs.min.js
 
 Hello (ESM version): https://unpkg.com/supersimpledev@1.0.1/hello.esm.js
 
-DayJS (ESM version): https://unpkg.com/dayjs@1.11.10/esm/index.js
+DayJS (ESM version): https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js
 
 How to Put a Website on the Internet: https://youtu.be/p1QU3kLFPdg
 
