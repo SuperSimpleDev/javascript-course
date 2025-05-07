@@ -4,6 +4,11 @@
   <body>
     <script>
       function arraySwap(array) {
+        // Input validation
+        if (!Array.isArray(array) || array.length < 2) {
+        return array; // or throw new Error('Invalid input');
+        }
+        
         const lastIndex = array.length - 1;
 
         // We need to save the values first before
